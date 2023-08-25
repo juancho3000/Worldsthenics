@@ -1,12 +1,29 @@
 
-function firstAction () {
-    let askForUserName = prompt("Escribe tu nombre")
-    let askForUserAge = prompt("ok" + " " + askForUserName + " " + "ahora podrias decirnos tu edad")
-    if(askForUserAge < 21){
-        alert("Lo lamento, pero no se aceptan compras hechas por menores a 21")
-    }else if(askForUserAge >= 21){
-        alert("Bienvenido" + " " + askForUserName + " " + "tienes edad suficiente para comprar")
-    }
+function calcularEdad() {
+
+ let userAge = document.getElementById("DOB").value;
+ let dob = new Date(userAge);
+  if(userAge==null || userAge=='') {
+    document.getElementById("message").innerHTML = "**Escribe tus datos!";  
+    return false; 
+  } else {
+  
+ 
+ let month_diff = Date.now() - dob.getTime();
+  
+  
+ let age_dt = new Date(month_diff); 
+  
+     
+ let year = age_dt.getUTCFullYear();
+  
+ 
+  let age = Math.abs(year - 1970);
+  
+ 
+  return document.getElementById("result").innerHTML =  
+           "tu edad es: " + age + " anos. ";
+  }
 }
 
 function dropdownAction () {
@@ -16,10 +33,10 @@ function dropdownAction () {
 
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-btn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
+     let dropdowns = document.getElementsByClassName("dropdown-content");
+     let i;
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
+       let openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }

@@ -48,6 +48,7 @@ body{
 
 .world-searchbar{
     width: 50%;
+    height: 10vh;
 }
 
 .page-head-logo img, .footer-logo img{

@@ -21,19 +21,27 @@
 </header>
    <main id="products">
     <section class="products-buttons">
-        <div class="dropdown">
-            <button onclick="dropdownAction()" class="dropdown-btn">List of products</button>
-            <div id="dropdown-list" class="dropdown-content">
-                <ul>
-                    <li onclick="dropdownPesas()">Pesas</li>
-                    <li onclick="dropdownAcc()">Accesorios</li>
-                    <li onclick="dropdownParallettes()">Paralelas</li>
-                    <li onclick="dropdownRopa()">Ropa</li>
-                </ul>
+    
+         <div id="contenedor">
+        
+        <button class="button-value" onclick="filterProductos('todos')">Todos</button>
+        <button class="button-value" onclick="filterProductos('pesas')">pesas</button>
+        <button class="button-value" onclick="filterProductos('accesorios')">Accesorios</button>
+        <button class="button-value" onclick="filterProductos('paralelas')">Paralelas</button>
+        <button class="button-value" onclick="filterProductos('ropa')">Ropa</button>
+    
+       
+        
+
+    </div>
+
+        <div class="wraper">
+            <div id="contenedor-busqueda">
+                 <input id="busqueda-input" type="search" placeholder="Barra de busqueda">
+                 <button id="busqueda">Click para resultado</button>
             </div>
         </div>
-        </div>
-        <input class="world-searchbar" type="text" placeholder="Searcbar, aun necesita trabajo" title="escribe producto">
+       
         <div>
             <h2 style="color: 32A80F"> Calcular edad <br> <br> </h2> 
             
@@ -46,6 +54,10 @@
             <h3 style="color:32A80F" id="result"></h3> 
             </div>
     </section>
+  
+    <div id="productos"></div>
+
+<script src="./principal/main.js"></script>
 <footer id="page-footer" style="margin-top: auto;">
     <section class="footer-content">
          <div class="footer-logo">
@@ -56,6 +68,5 @@
     </div>
     </section>
 </footer>
-<script src="./principal/main.js"></script>
 </body>
 </html>

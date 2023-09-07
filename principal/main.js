@@ -22,120 +22,104 @@ function calcularEdad() {
   
  
   return document.getElementById("result").innerHTML =  
-           "tu edad es: " + age + " anos. ";
+           "tu edad es: " + age + " años. ";
   }
-}
+}   
+      let dropProducts = {
+        data: [ 
+      {categoria: "pesas", name:"25 kg disco", precio:35, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/25-kgs.avif",},
+      {categoria: "pesas", name:"20 kg disco", precio:25, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/20-kgs.avif",},
+      {categoria: "pesas", name:"15 kg disco", precio:20, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/15-kgs.avif",},
+      {categoria: "pesas", name:"10 kg disco", precio:15, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/10-kgs.webp",},
+      {categoria: "pesas", name:"5 kg disco", precio:10, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/5-kgs.webp",},
+      {categoria: "accesorios", name:"Cinturon de lastre", precio:10, image:"/home/juan/personal/projecto-Juan/public/images/accessories-imgs/dip-belt.webp",},
+      {categoria: "accesorios", name:"Cinturon de peso", precio:10, image:"/home/juan/personal/projecto-Juan/public/images/accessories-imgs/sbd-belt.jpg",},
+      {categoria: "accesorios", name:"coderas", precio:5, image:"/home/juan/personal/projecto-Juan/public/images/accessories-imgs/elbow-sl.jpeg",},
+      {categoria: "accesorios", name:"munequeras", precio:5, image:"/home/juan/personal/projecto-Juan/public/images/accessories-imgs/wrist-wraps.jpg",},
+      {categoria: "accesorios", name:"rodilleras", precio:7, image:"/home/juan/personal/projecto-Juan/public/images/accessories-imgs/knee-sl.webp",},
+      {categoria: "paralelas", name:"paralelas bajas", precio:15, image:"/home/juan/personal/projecto-Juan/public/images/parallettes-imgs/low-pl.webp",},
+      {categoria: "paralelas", name:"paralelas altas", precio:18, image:"/home/juan/personal/projecto-Juan/public/images/parallettes-imgs/high-pl.jpeg",},
+      {categoria: "paralelas", name:"estacion de fondos", precio:30, image:"/home/juan/personal/projecto-Juan/public/images/parallettes-imgs/dip-bars.webp",},
+      {categoria: "paralelas", name:"barra front lever", precio:15, image:"/home/juan/personal/projecto-Juan/public/images/parallettes-imgs/front-lever-bar.jpeg",},
+      {categoria: "paralelas", name:"anillas", precio:10, image:"/home/juan/personal/projecto-Juan/public/images/parallettes-imgs/gym-rings.jpg",},
+      {categoria: "ropa", name:"franela algodon", precio:15, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/cotton-shirt.webp",},
+      {categoria: "ropa", name:"franela algodon oversize", precio:20, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/Oversize-shirt.webp",},
+      {categoria: "ropa", name:"pantalon largo algodon", precio:25, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/long-pants.jpeg",},
+      {categoria: "ropa", name:"shorts de algodon", precio:10, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/shorts.webp",},
+      {categoria: "ropa", name:"sweater", precio:25, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/sweater-hoodie.webp",},      
+    ],
+      };
 
-function dropdownAction () {
-  document.getElementById("dropdown-list").classList.toggle("show");
-}
-  
+      for(let i of dropProducts.data){
+        let card = document.createElement("div");
+        card.classList.add("card", i.categoria, "hide");
 
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-btn')) {
-     let dropdowns = document.getElementsByClassName("dropdown-content");
-     let i;
-      for (i = 0; i < dropdowns.length; i++) {
-       let openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+        let imagenContenedor = document.createElement("div");
+        imagenContenedor.classList.add("imagen-cont");
+
+        let imagenProducto = document.createElement("img");
+        imagenProducto.setAttribute("src", i.image);
+        imagenContenedor.appendChild(imagenProducto);
+        card.appendChild(imagenContenedor);
+
+        let contenedorProducto = document.createElement("div");
+        contenedor.classList.add("cont");
+
+        let nombreProducto = document.createElement("h5");
+        nombreProducto.classList.add("producto-name");
+        nombreProducto.innerText = i.name.toUpperCase();
+        contenedorProducto.appendChild(nombreProducto);
+
+        let precioProducto = document.createElement("h6");
+        precioProducto.innerText = "$" + i.precio;
+        contenedorProducto.appendChild(precioProducto);
+
+        let productoCompButton = document.createElement("h4")
+        productoCompButton.innerText = "Comprar";
+        contenedorProducto.appendChild(productoCompButton);
+
+        card.appendChild(contenedorProducto);
+        document.getElementById("productos").appendChild(card);
       }
-    }
-  }
-  
 
-  const productsDropdown = document.getElementById("dropdown-test")
-  const productsImages = document.getElementById("drop-test-image")
+      function filterProductos(value) {
+        let dropButtons = document.querySelectorAll(".button-value");
+        dropButtons.forEach((button) => {
+          if(value.toUpperCase() == button.innerText.toUpperCase()){
+            button.classList.add("active");
+          } else {
+            button.classList.remove("active");
+          }
+        });
 
-   function dropdownPesas(){
-    const productosPesas = [
-      {id:1, name:"25 kg disco", precio:20, img:"images/plates-imgs/25-kgs.avif"},
-      {id:2, name:"20 kg disco", precio:20, img:"images/plates-imgs/20-kgs.avif"},
-      {id:3, name:"15 kg disco", precio:20, img:"images/plates-imgs/15-kgs.avif"},
-      {id:4, name:"10 kg disco", precio:20, img:"images/plates-imgs/10-kgs.webpp"},
-      {id:5, name:"5 kg disco", precio:20, img:"images/plates-imgs/5-kgs.webpp"},
-    ]
-    const outcomePesas = productosPesas.map((el) => el.img);
-    let OutcomeAnswerPesas = prompt("has seleccionado ropa?, es para confirmar")
-    let respuestaPositivaPesas = "si"
+        let productoElements = document.querySelectorAll(".card");
+        productoElements.forEach((element) => {
+          if(value == "todos"){
+            element.classList.remove("hide");
+          } else {
+            if(element.classList.contains(value)) {
+              element.classList.remove("hide")
+            } else {
+              element.classList.add("hide");
+            }
+          }
+        });
+      }
 
-    if(OutcomeAnswerPesas === respuestaPositivaPesas){
-      alert("has seleccionado los productos con id:" + " " + productosPesas.map((el) => el.id))
-    }if(OutcomeAnswerPesas== ""){
-      alert("para ver los id tienes que escribir si")
-    }
-    else if(OutcomeAnswerPesas === "no"){
-      alert("ok, puedes selecconar otra opcion entonces")
-    }
-    console.log(outcomePesas);
-  }
+      document.getElementById("busqueda").addEventListener("click", () => {
+        let busquedaInput = document.getElementById("busqueda-input").value;
+        let inputElements = document.querySelectorAll(".producto-name");
+        let inputCards = document.querySelectorAll(".card");
 
-  function dropdownAcc(){
-    const productosAccesorios = [
-      {id:6, name:"Cinturon de lastre", precio:10, img:"images/accessories-imgs/dip-belt.webpp"},
-      {id:7, name:"Cinturon de peso", precio:10, img:"images/accessories-imgs/sbd-belt.jpg"},
-      {id:8, name:"coderas", precio:5, img:"images/accessories-imgs/elbow-sl.jpeg"},
-      {id:9, name:"munequeras", precio:5, img:"images/accessories-imgs/wrist-wraps.jpg"},
-      {id:10, name:"rodilleras", precio:7, img:"images/accessories-imgs/elbow-sl.jpeg"}
-    ]
-    const outcomeAcc = productosAccesorios.map((el) => el.img);
-    let OutcomeAnswerAcc = prompt("has seleccionado ropa?, es para confirmar")
-    let respuestaPositivaAcc = "si"
+        inputElements.forEach((element, index) => {
+          if(element.innerText.includes(busquedaInput.toUpperCase())) {
+            inputCards[index].classList.remove("hide");
+          } else {
+            inputCards[index].classList.add("hide");
+          }
+        });
+      });
 
-    if(OutcomeAnswerAcc === respuestaPositivaAcc){
-      alert("has seleccionado los productos con id:" + " " + productosAccesorios.map((el) => el.id))
-    }if(OutcomeAnswerAcc== ""){
-      alert("para ver los id tienes que escribir si")
-    }
-    else if(OutcomeAnswerAcc === "no"){
-      alert("ok, puedes selecconar otra opcion entonces")
-    }
-    console.log(outcomeAcc);
-  }
-  
-   function dropdownParallettes(){
-      const productosParallettes = [
-        {id:11, name:"paralelas bajas", precio:15, img:"images/parallettes-imgs/low-pl.webp"},
-        {id:12, name:"paralelas altas", precio:18, img:"images/parallettes-imgs/high-pl.jpeg"},
-        {id:13, name:"estacion de fondos", precio:30, img:"images/parallettes-imgs/dip-bars.webp"},
-        {id:14, name:"barra front lever", precio:15, img:"images/parallettes-imgs/front-lever-bar.jpeg"},
-        {id:15, name:"anillas", precio:10, img:"images/parallettes-imgs/gym-rings.jpg"}
-    ]
-    const outcomeParallettes = productosParallettes.map((el) => el.img);
-    let OutcomeAnswerParallettes = prompt("has seleccionado ropa?, es para confirmar")
-    let respuestaPositivaParallettes = "si"
-
-    if(OutcomeAnswerParallettes === respuestaPositivaParallettes){
-      alert("has seleccionado los productos con id:" + " " + productosParallettes.map((el) => el.id))
-    }if(OutcomeAnswerParallettes == ""){
-      alert("para ver los id tienes que escribir si")
-    }
-    else if(OutcomeAnswerParallettes === "no"){
-      alert("ok, puedes selecconar otra opcion entonces")
-    }
-    console.log(outcomeParallettes);
-   }
-  
-    function dropdownRopa(){
-      const productosRopa = [
-      {id:16, name:"franela algodon", precio:15, img:"images/clothes-imgs/cotton-shirt.webp"},
-      {id:17, name:"franela algodon oversize", precio:20, img:"images/clothes-imgs/Oversize-shirt.webp"},
-      {id:18, name:"pantalon largo algodon", precio:25, img:"images/clothes-imgs/long-pants.webp"},
-      {id:19, name:"shorts de algodon", precio:10, img:"images/clothes-imgs/shorts.webp"},
-      {id:20, name:"sweater", precio:25, img:"images/clothes-imgs/sweater-hoodie.webp"}
-    ]
-    const outcomeRopa = productosRopa.map((el) => el.img);
-    let OutcomeAnswerRopa = prompt("has seleccionado ropa?, es para confirmar")
-    let respuestaPositivaRopa = "si"
-
-    if(OutcomeAnswerRopa === respuestaPositivaRopa){
-      alert("has seleccionado los productos con id:" + " " + productosRopa.map((el) => el.id))
-    }if(OutcomeAnswerRopa == ""){
-      alert("para ver los id tienes que escribir si")
-    }
-    else if(OutcomeAnswerRopa === "no"){
-      alert("ok, puedes selecconar otra opcion entonces")
-    }
-    console.log(outcomeRopa);
-    }
+      window.onload = () => {
+        filterProductos("todos")
+      }

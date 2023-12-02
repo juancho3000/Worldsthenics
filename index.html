@@ -29,30 +29,28 @@
         <button class="button-value" onclick="filterProductos('accesorios')">Accesorios</button>
         <button class="button-value" onclick="filterProductos('paralelas')">Paralelas</button>
         <button class="button-value" onclick="filterProductos('ropa')">Ropa</button>
-    
-       
-        
-
     </div>
-
         <div class="wraper">
             <div id="contenedor-busqueda">
                  <input id="busqueda-input" type="search" placeholder="Barra de busqueda">
                  <button id="busqueda">Click para resultado</button>
             </div>
         </div>
-       
-        <div>
-            <h2 style="color: 32A80F"> Calcular edad <br> <br> </h2> 
-            
-            <!-- Choose a date and enter in input field -->
-            <b> Ingresa tu edad <input type=date id = DOB> </b>
-            <span id = "message" style="color:red"> </span> <br><br>  
-            
-            <!-- Choose a date and enter in input field -->
-            <button type="submit" onclick = "calcularEdad()">presiona para ver el resultado</button> <br><br>
-            <h3 style="color:32A80F" id="result"></h3> 
+
+        <div class="shopping-cart">
+            <img src="./icons/shopping-cart.png">
+            <span class="cantidad">0</span>
+        </div>
+
+        <div class="shop-cart">
+            <h1>carro de compras</h1>
+            <ul class="listCard"></ul>
+            <div class="checkout">
+                <div class="total">0</div>
+                <div class="closeShop">cerrar</div>
             </div>
+        </div>
+        
     </section>
   
     <div id="productos"></div>

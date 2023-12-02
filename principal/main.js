@@ -1,4 +1,4 @@
-
+/*
 function calcularEdad() {
 
  let userAge = document.getElementById("DOB").value;
@@ -24,7 +24,21 @@ function calcularEdad() {
   return document.getElementById("result").innerHTML =  
            "tu edad es: " + age + " años. ";
   }
-}   
+  } 
+*/ 
+
+let openCart = document.querySelector('.shopping-cart');
+let closeCart = document.querySelector('.closeShop');
+let bodyCart = document.querySelector('body');
+let listCard = document.querySelectorAll('.listCard');
+
+openCart.addEventListener('click', () =>{
+  bodyCart.classList.add('activo');
+})
+closeCart.addEventListener('click', ()=>{
+  bodyCart.classList.remove('activo');
+})
+  
       let dropProducts = {
         data: [ 
       {categoria: "pesas", name:"25 kg disco", precio:35, image:"/home/juan/personal/projecto-Juan/public/images/plates-imgs/25-kgs.avif",},
@@ -49,6 +63,9 @@ function calcularEdad() {
       {categoria: "ropa", name:"sweater", precio:25, image:"/home/juan/personal/projecto-Juan/public/images/clothes-imgs/sweater-hoodie.webp",},      
     ],
       };
+      
+
+      let listProducts = [];
 
       for(let i of dropProducts.data){
         let card = document.createElement("div");
@@ -65,23 +82,28 @@ function calcularEdad() {
         let contenedorProducto = document.createElement("div");
         contenedor.classList.add("cont");
 
-        let nombreProducto = document.createElement("h5");
+        let nombreProducto = document.createElement("h4");
         nombreProducto.classList.add("producto-name");
         nombreProducto.innerText = i.name.toUpperCase();
         contenedorProducto.appendChild(nombreProducto);
 
-        let precioProducto = document.createElement("h6");
+        let precioProducto = document.createElement("h5");
         precioProducto.innerText = "$" + i.precio;
         contenedorProducto.appendChild(precioProducto);
 
-        let productoCompButton = document.createElement("h4")
-        productoCompButton.innerText = "Comprar";
-        contenedorProducto.appendChild(productoCompButton);
-
-        card.appendChild(contenedorProducto);
-        document.getElementById("productos").appendChild(card);
-      }
-
+       
+          
+            let productoCompButton = document.createElement('h6');
+            productoCompButton.innerText= "Comprar";
+            productoCompButton.addEventListener('click', console.log(productoCompButton))
+            contenedorProducto.appendChild(productoCompButton);
+            card.appendChild(contenedorProducto);
+            document.getElementById("productos").appendChild(card)
+       
+        let cantidadTotal = document.querySelector('.total');
+        cantidadTotal.innerText = i.precio
+          
+         
       function filterProductos(value) {
         let dropButtons = document.querySelectorAll(".button-value");
         dropButtons.forEach((button) => {
@@ -122,4 +144,5 @@ function calcularEdad() {
 
       window.onload = () => {
         filterProductos("todos")
+      }
       }

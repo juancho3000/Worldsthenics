@@ -35,6 +35,11 @@
     cursor: pointer;
 }
 
+#contenedor-busqueda button:hover{
+    background-color: #6759ff;
+    transition: 2s;
+}
+
 .button-value{
     border: 2px solid lightgray;
   padding: 1em 2.2em;

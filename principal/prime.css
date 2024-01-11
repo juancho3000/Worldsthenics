@@ -300,3 +300,7 @@ body{
     transition: .5s;
     
 }
+
+#gitHub-link{
+    cursor: pointer;
+}

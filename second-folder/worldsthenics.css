@@ -216,7 +216,7 @@ img{
 }
 
 .listCard{
-  max-height: 50vh;
+  max-height: 60vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;

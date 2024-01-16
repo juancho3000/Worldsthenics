@@ -114,7 +114,7 @@ function addToCart(key) {
 }
 
 function reloadCard(){
-    listProducts.innerHTML = "";
+    listCard.innerHTML = "";
     let count = 0;
     let totalPrice = 0;
     listProducts.forEach((value, key) => {
@@ -141,6 +141,6 @@ function reloadCard(){
         }
     })
 
-    total.innerText = totalPrice;
+    total.innerText = totalPrice.toLocaleString();
     qty.innerText = count;
 }

@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightgray;
+  font-family: system-ui;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  justify-self: center;
+  height: 30vh;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-content img {
+  height: 90px;
+  border-radius: 55px;
+}
+
+.header-content a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  margin-top: 50px;
+}
+
+.shopCartOpen {
+  position: relative;
+  text-align: right;
+}
+
+main .shopCartOpen img {
+  cursor: pointer;
+}
+
+.shopCartOpen img:hover {
+    box-shadow: 0px 20px 40px(0,0,0,0,0.2);
+    transition: .3s;
+    transform: scale(1.05,1.05);
+}
+
+.qty {
+  background-color: red;
+  border-radius: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 65px;
+  left: 80%;
+  padding: 3px 10px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.card {
+  position: fixed;
+  top: 0;
+  width: 330px;
+  background-color: white;
+  height: 100vh;
+  transition: 0.5s;
+  left: 100%;
+}
+
+.card h1 {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 30vh;
+}
+
+.card .checkOut {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+  height: 10vh;
+  align-items: center;
+}
+
+
+
+#total {
+  background-color: black;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#total:hover{
+    background-color: orange;
+    transition: 2s;
+}
+
+.closeShopping{
+    background-color: red;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.closeShopping:hover{
+    background-color: darkred;
+    transition: 2s;
+}
+
+.active{
+  overflow-x: hidden;
+}
+
+.active .shopCartOpen{
+    left: calc(100% - 40px);
+    transform: .5s;
+}
+
+.active .card{
+    transform: translateX(-380px);
+    transition: .5s;
+}
+
+img{
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+.list div{
+  display: flex;
+  flex-direction: column;
+  max-width: 13em;
+  margin-top: 1em;
+  padding: 1em;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1em 2em 2.5em rgb(1 2 68 / 8%);
+}
+
+.list div button{
+  display: flex;
+  background-color: green;
+  width: 100%;
+  padding: 5px;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.list div button:hover{
+  background-color: #2ecc71;
+}

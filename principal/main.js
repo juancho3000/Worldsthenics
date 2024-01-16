@@ -1,32 +1,3 @@
-/*
-function calcularEdad() {
-
- let userAge = document.getElementById("DOB").value;
- let dob = new Date(userAge);
-  if(userAge==null || userAge=='') {
-    document.getElementById("message").innerHTML = "**Escribe tus datos!";  
-    return false; 
-  } else {
-  
- 
- let month_diff = Date.now() - dob.getTime();
-  
-  
- let age_dt = new Date(month_diff); 
-  
-     
- let year = age_dt.getUTCFullYear();
-  
- 
-  let age = Math.abs(year - 1970);
-  
- 
-  return document.getElementById("result").innerHTML =  
-           "tu edad es: " + age + " años. ";
-  }
-  } 
-*/ 
-
 let openCart = document.querySelector('.shopping-cart');
 let closeCart = document.querySelector('.closeShop');
 let bodyCart = document.querySelector('body');
@@ -95,13 +66,21 @@ closeCart.addEventListener('click', ()=>{
           
             let productoCompButton = document.createElement('h6');
             productoCompButton.innerText= "Comprar";
-            productoCompButton.addEventListener('click', console.log(productoCompButton))
+            productoCompButton.addEventListener('click',() =>{
+              console.log("total:" + i.precio);
+                 let subTotal = 0 ;
+            let totalSum = subTotal + i.precio;
+        let cantidadTotal = document.querySelector('.total');
+        cantidadTotal.innerText = totalSum;
+            
+            });
+           
             contenedorProducto.appendChild(productoCompButton);
             card.appendChild(contenedorProducto);
             document.getElementById("productos").appendChild(card)
        
-        let cantidadTotal = document.querySelector('.total');
-        cantidadTotal.innerText = i.precio
+
+           
           
          
       function filterProductos(value) {

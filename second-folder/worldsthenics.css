@@ -108,9 +108,9 @@ main .shopCartOpen img {
 
 .card {
   position: fixed;
-  top: -38px;
+  top: 0px;
   width: 330px;
-  background-color: white;
+  background-color: lightgray;
   height: 100vh;
   transition: 0.5s;
   left: 100%;
@@ -225,10 +225,52 @@ img{
 
 .listCard li{
   display: flex;
+  gap: 10px;
   align-items: center;
   width: 100%;
   justify-content: space-around;
-  background-color: darkgray;
-  gap: 5px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.listCard li div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.listCard li img{
+  width: 90%;
+}
+
+.listCard button{
+  width: 20px;
+  border: none;
+  cursor: pointer;
+  height: 5vh;
+}
+
+.listCard .count{
+   margin: 0 10px;
+}
+
+#minus{
+  background-color: red;
+  color: white;
+}
+
+#minus:hover{
+  background-color: darkred;
+  color: white;
+}
+
+#plus{
+  color: white;
+  background-color: #2ecc71;
+}
+
+#plus:hover{
+  background-color: green;
+  color: white;
 }

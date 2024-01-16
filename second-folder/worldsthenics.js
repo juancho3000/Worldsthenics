@@ -128,13 +128,10 @@ function reloadCard(){
             <div>${value.name}</div>
             <div>${value.price.toLocaleString()}</div>
             <div>${value.category}</div>
-            <div>${value.qty}</div>
             <div>
-                <button onclick="changeQty(${key}, ${value.qty - 1})">-</button>
-               </div> 
+                <button id="minus" onclick="changeQty(${key}, ${value.qty - 1})">-</button>
             <div classname="count">${value.qty}</div>
-            <div>
-            <button onclick="changeQty(${key}, ${value.qty + 1})">+</button>
+            <button id="plus" onclick="changeQty(${key}, ${value.qty + 1})">+</button>
             </div>
             `;
             listCard.appendChild(cartDiv);

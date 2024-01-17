@@ -109,6 +109,7 @@ function addToCart(key) {
     if(listProducts[key] == null){
         listProducts[key] = products[key];
         listProducts[key].qty = 1;
+        prices = products[key].price
     }
     reloadCard();
 }
@@ -129,9 +130,9 @@ function reloadCard(){
             <div>${value.price.toLocaleString()}</div>
             <div>${value.category}</div>
             <div>
-                <button id="minus" onclick="changeQty(${key}, ${value.qty - 1})">-</button>
+                <button id="minus" onclick="changeQtyPlus(${key}, ${value.qty - 1})">-</button>
             <div classname="count">${value.qty}</div>
-            <button id="plus" onclick="changeQty(${key}, ${value.qty + 1})">+</button>
+            <button id="plus" onclick="changeQtyPlus(${key}, ${value.qty + 1})">+</button>
             </div>
             `;
             listCard.appendChild(cartDiv);
@@ -140,4 +141,14 @@ function reloadCard(){
 
     total.innerText = totalPrice.toLocaleString();
     qty.innerText = count;
+}
+
+function changeQtyPlus(key, qty){
+    if(qty == 0){
+        delete listProducts[key];
+    } else {
+        listProducts[key].qty = qty;
+        listProducts[key].price = qty * prices;
+    }
+    reloadCard();
 }

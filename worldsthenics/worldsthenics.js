@@ -18,8 +18,7 @@ let products = [
     category: "plates",
     name: "25 kg plate",
     price: 52,
-    image:
-    "worldsthenics/worldsthenics-imgs/plates/25kgs.webp",
+    image: "worldsthenics/worldsthenics-imgs/plates/25kgs.webp",
   },
 
   {

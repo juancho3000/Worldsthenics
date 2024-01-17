@@ -19,68 +19,68 @@ let products = [
     name: "25 kg plate",
     price: 52,
     image:
-    "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/plates/25kgs.webp",
+    "worldsthenics/worldsthenics-imgs/plates/25kgs.webp",
   },
 
   {
     category: "plates",
     name: "20 kg plate",
     price: 45,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/plates/20kgs.webp",
+    image: "worldsthenics/worldsthenics-imgs/plates/20kgs.webp",
   },
 
   {
     category: "belts",
     name: "dip belt",
     price: 15,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/belts/dipBelt.webp",
+    image: "worldsthenics/worldsthenics-imgs/belts/dipBelt.webp",
   },
 
   {
     category: "belts",
     name: "weightlifting belt",
     price: 20,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/belts/BELTSBD.jpg",
+    image: "worldsthenics/worldsthenics-imgs/belts/BELTSBD.jpg",
   },
 
   {
     category: "bars",
     name: "dip bars",
     price: 300,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/bars/dipBar.webp",
+    image: "worldsthenics/worldsthenics-imgs/bars/dipBar.webp",
   },
 
   {
     category: "bars",
     name: "pull up bar",
     price: 170,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/bars/pullupBar.webp",
+    image: "worldsthenics/worldsthenics-imgs/bars/pullupBar.webp",
   },
 
   {
     category: "appareal-sleeves",
     name: "elbow sleeves",
     price: 17,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/appareal-sleeves/elbowSleeves.jpg",
+    image: "worldsthenics/worldsthenics-imgs/appareal-sleeves/kneeSleeve.jpeg",
   },
   {
     category: "appareal-sleeves",
     name: "knee sleeves",
     price: 25,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/appareal-sleeves/kneeSleeve.jpeg",
+    image: "worldsthenics/worldsthenics-imgs/appareal-sleeves/kneeSleeve.jpeg",
   },
 
   {
     category: "barbell",
     name: "20 kg barbell",
     price: 17,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/barbells/male20kgBar.webp",
+    image: "worldsthenics/worldsthenics-imgs/barbells/male20kgBar.webp",
   },
   {
     category: "barbell",
     name: "15 kg barbell",
     price: 25,
-    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/barbells/female15kgBar.jpg",
+    image: "worldsthenics/worldsthenics-imgs/barbells/female15kgBar.jpg",
   },
 ];
 

@@ -19,68 +19,68 @@ let products = [
     name: "25 kg plate",
     price: 52,
     image:
-     "./worldsthenics-imgs/plates/25kgs.webp",
+    "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/plates/25kgs.webp",
   },
 
   {
     category: "plates",
     name: "20 kg plate",
     price: 45,
-    image: "./worldsthenics-imgs/plates/20kgs.webp",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/plates/20kgs.webp",
   },
 
   {
     category: "belts",
     name: "dip belt",
     price: 15,
-    image: "./worldsthenics-imgs/belts/dipBelt.webp",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/belts/dipBelt.webp",
   },
 
   {
     category: "belts",
     name: "weightlifting belt",
     price: 20,
-    image: "./worldsthenics-imgs/belts/BELTSBD.jpg",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/belts/BELTSBD.jpg",
   },
 
   {
     category: "bars",
     name: "dip bars",
     price: 300,
-    image: "./worldsthenics-imgs/bars/dipBar.webp",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/bars/dipBar.webp",
   },
 
   {
     category: "bars",
     name: "pull up bar",
     price: 170,
-    image: "./worldsthenics-imgs/bars/pullupBar.webp",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/bars/pullupBar.webp",
   },
 
   {
     category: "appareal-sleeves",
     name: "elbow sleeves",
     price: 17,
-    image: "./worldsthenics-imgs/appareal-sleeves/elbowSleeves.jpg",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/appareal-sleeves/elbowSleeves.jpg",
   },
   {
     category: "appareal-sleeves",
     name: "knee sleeves",
     price: 25,
-    image: "./worldsthenics-imgs/appareal-sleeves/kneeSleeve.jpeg",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/appareal-sleeves/kneeSleeve.jpeg",
   },
 
   {
     category: "barbell",
     name: "20 kg barbell",
     price: 17,
-    image: "./worldsthenics-imgs/barbells/male20kgBar.webp",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/barbells/male20kgBar.webp",
   },
   {
     category: "barbell",
     name: "15 kg barbell",
     price: 25,
-    image: "./worldsthenics-imgs/barbells/female15kgBar.jpg",
+    image: "/home/juan/personal/projecto-Juan/worldsthenics/worldsthenics-imgs/barbells/female15kgBar.jpg",
   },
 ];
 
@@ -130,9 +130,9 @@ function reloadCard(){
             <div>${value.price.toLocaleString()}</div>
             <div>${value.category}</div>
             <div>
-                <button id="minus" onclick="changeQtyPlus(${key}, ${value.qty - 1})">-</button>
+                <button id="minus" onclick="changeQty(${key}, ${value.qty - 1})">-</button>
             <div classname="count">${value.qty}</div>
-            <button id="plus" onclick="changeQtyPlus(${key}, ${value.qty + 1})">+</button>
+            <button id="plus" onclick="changeQty(${key}, ${value.qty + 1})">+</button>
             </div>
             `;
             listCard.appendChild(cartDiv);
@@ -143,7 +143,7 @@ function reloadCard(){
     qty.innerText = count;
 }
 
-function changeQtyPlus(key, qty){
+function changeQty(key, qty){
     if(qty == 0){
         delete listProducts[key];
     } else {

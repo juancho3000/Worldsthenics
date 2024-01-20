@@ -200,7 +200,7 @@ img{
   height: 15em;
 }
 
-.list .item{
+.item{
   display: flex;
   flex-direction: column;
   max-width: 18em;
@@ -381,3 +381,8 @@ img{
   }
  }
 /*media queries*/
+
+/*testing filter and searchbar*/
+.hide{
+  display: none;
+}

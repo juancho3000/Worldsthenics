@@ -113,7 +113,7 @@ closeCart.addEventListener('click', ()=>{
         let inputCards = document.querySelectorAll(".card");
 
         inputElements.forEach((element, index) => {
-          if(element.innerText.includes(busquedaInput.toUpperCase())) {
+          if(element.innerText.includes(busquedaInput.toUpperCase())) { 
             inputCards[index].classList.remove("hide");
           } else {
             inputCards[index].classList.add("hide");

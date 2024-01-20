@@ -88,11 +88,11 @@ let listProducts = [];
 function initShop() {
   products.forEach((value, key) => {
     let productsDiv = document.createElement("div");
-    productsDiv.classList.add("item");
+    productsDiv.classList.add("item", value.category, "hide");
     productsDiv.innerHTML = `
             
             
-            <h1>${value.name}</h1>
+            <h1 class="producto-name">${value.name}</h1>
             <img classname="card-photo" src="${value.image}"/>
             <p>$ ${value.price.toLocaleString()}</p>
             <p>${value.category}</p>
@@ -151,3 +151,48 @@ function changeQty(key, qty){
     }
     reloadCard();
 }
+
+
+//filter and searchbar testing
+function filterProductos(value) {
+  let dropButtons = document.querySelectorAll(".button-value");
+  dropButtons.forEach((button) => {
+    if(value.toUpperCase() == button.innerText.toUpperCase()){
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+
+  let productoElements = document.querySelectorAll(".item");
+  productoElements.forEach((element) => {
+    if(value == "all"){
+      element.classList.remove("hide");
+    } else {
+      if(element.classList.contains(value)) {
+        element.classList.remove("hide")
+      } else {
+        element.classList.add("hide");
+      }
+    }
+  });
+}
+
+document.getElementById("busqueda").addEventListener("click", () => {
+  let busquedaInput = document.getElementById("busqueda-input").value;
+  let inputElements = document.querySelectorAll(".producto-name");
+  let inputCards = document.querySelectorAll(".item");
+
+  inputElements.forEach((element, index) => {
+    if(element.innerText.includes(busquedaInput.toUpperCase())) {
+      inputCards[index].classList.remove("hide");
+    } else {
+      inputCards[index].classList.add("hide");
+    }
+  });
+});
+
+window.onload = () => {
+  filterProductos("all")
+}
+//filter and searchbar testing

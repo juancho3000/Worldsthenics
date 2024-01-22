@@ -391,12 +391,7 @@ img{
 }
 
 #contenedor{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 20px;
   height: 8vh;
-  align-items: center;
 }
 
 .button-value{
@@ -417,12 +412,6 @@ img{
   background-color: black;
   color: white;
   overflow-x: hidden;
-}
-
-#contenedor-busqueda{
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
 
 #contenedor-busqueda input{

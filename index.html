@@ -32,13 +32,13 @@
 
  <div id="dropdown-mobile">
   <label>dropdown filter</label>
-  <select id="dropdown-list" onchange="getValue()">
-    <option selected="all">All</option>
-    <option value="plates">Plates</option>
-    <option value="belts">Belts</option>
-    <option value="bars">Bars</option>
-    <option value="appareal-sleeves">Appareal-sleeves</option>
-    <option value="barbell">Barbell</option>
+  <select id="dropdown-list" onchange="(value)">
+    <option class="button-value" onclick="filterProductos('all')">All</option>
+    <option class="button-value" onclick="filterProductos('plates')" value="plates">Plates</option>
+    <option class="button-value" onclick="filterProductos('belts')" value="belts">Belts</option>
+    <option class="button-value" onclick="filterProductos('bars')" value="bars">Bars</option>
+    <option class="button-value" onclick="filterProductos('appareal-sleeves')" value="appareal-sleeves">Appareal-sleeves</option>
+    <option class="button-value" onclick="filterProductos('barbell')" value="barbell">Barbell</option>
   </select>
  </div>
 

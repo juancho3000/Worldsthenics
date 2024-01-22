@@ -402,6 +402,12 @@ img{
   }
 }
 
+option:hover{
+  background-color: black;
+  color: white;
+  transition: 2s linear;
+}
+
 
 @media screen and (min-width: 800px) {
   #dropdown-mobile{

@@ -392,6 +392,13 @@ img{
 
 #contenedor{
   height: 8vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wraper{
+  display: flex;
+  justify-content: center;
 }
 
 .button-value{

@@ -158,9 +158,9 @@ function filterProductos(value) {
   let dropButtons = document.querySelectorAll(".button-value");
   dropButtons.forEach((button) => {
     if(value.toUpperCase() == button.innerText.toUpperCase()){
-      button.classList.add("active");
+      button.classList.add("activo");
     } else {
-      button.classList.remove("active");
+      button.classList.remove("activo");
     }
   });
 

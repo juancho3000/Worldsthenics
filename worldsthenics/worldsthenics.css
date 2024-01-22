@@ -413,7 +413,7 @@ img{
   transition: 1000ms linear;
 }
 
-.active{
+.activo{
   background-color: black;
   color: white;
   overflow-x: hidden;

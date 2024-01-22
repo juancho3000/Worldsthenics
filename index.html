@@ -30,6 +30,18 @@
      <button class="button-value" onclick="filterProductos('barbell')">Barbell</button>
  </div>
 
+ <div id="dropdown-mobile">
+  <label>dropdown filter</label>
+  <select id="dropdown-list" onchange="getValue()">
+    <option selected="all">All</option>
+    <option value="plates">Plates</option>
+    <option value="belts">Belts</option>
+    <option value="bars">Bars</option>
+    <option value="appareal-sleeves">Appareal-sleeves</option>
+    <option value="barbell">Barbell</option>
+  </select>
+ </div>
+
  <div class="wraper">
   <div id="contenedor-busqueda">
        <input id="busqueda-input" type="search" placeholder="Barra de busqueda">

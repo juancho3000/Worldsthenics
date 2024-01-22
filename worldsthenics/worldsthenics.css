@@ -396,6 +396,19 @@ img{
   justify-content: center;
 }
 
+@media screen and (max-width: 800px) {
+  #contenedor{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  #dropdown-mobile{
+    display: none;
+  }
+}
+
 .wraper{
   display: flex;
   justify-content: center;

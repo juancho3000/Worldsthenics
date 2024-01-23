@@ -120,7 +120,7 @@ main .shopCartOpen img {
   position: fixed;
   top: 0px;
   width: 330px;
-  background-color: lightgray;
+  background-color: white;
   height: 100vh;
   transition: 0.5s;
   left: 100%;
@@ -190,8 +190,6 @@ main .shopCartOpen img {
     transform: .5s;
 }
 
-
-
 .active .card{
     transform: translateX(-321px);
     transition: .5s;
@@ -243,8 +241,9 @@ img{
   align-items: center;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
+  height: 18vh;
 }
 
 .listCard li div{
@@ -262,7 +261,7 @@ img{
   width: 20px;
   border: none;
   cursor: pointer;
-  height: 5vh;
+  height: 22px;
 }
 
 .listCard .count{
@@ -289,7 +288,87 @@ img{
   color: white;
 }
 
+.hide{
+  display: none;
+}
+
+#contenedor{
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+}
+
+option:hover{
+  background-color: black;
+  color: white;
+  transition: 2s linear;
+}
+
+.searchbar{
+  display: flex;
+  justify-content: center;
+} 
+@media screen and (max-width:1000px) {
+  .searchbar{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
+
+.button-value{
+  background-color: transparent;
+  padding: 1em 2.2em;
+  border: 3px solid lightgray;
+  cursor: pointer;
+  border-radius: 3em;
+}
+
+.button-value:hover{
+  background-color: black;
+  color: white;
+  transition: 1000ms linear;
+}
+
+.activo{
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+#contenedor-busqueda input{
+  background-color: transparent;
+  border-bottom: 2px solid #110f29;
+  padding: 1em 0.3em;
+}
+
+#contenedor-busqueda input:focus{
+  border-bottom-color: #6759ff;
+}
+
+#contenedor-busqueda button{
+  padding: 1em 2em;
+  margin-left: 1em;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+#contenedor-busqueda button:hover{
+  background-color: #6759ff;
+  transition: 2s;
+}
+
 /*media queries*/
+@media screen and (max-width: 1000px) {
+  .active .card{
+    transform: translateX(-280px);
+    transition: .5s;
+}
+}
+
 @media screen and (max-width: 1000px) {
   main{
     display: flex;
@@ -341,7 +420,7 @@ img{
     position: fixed;
     top: 0px;
     width: 165px;
-    background-color: lightgray;
+    background-color: white;
     height: 60vh;
     transition: 0.5s;
     left: 100%;
@@ -363,6 +442,8 @@ img{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    height: 22vh;
+    font-size: small;
   } 
 }
 
@@ -375,6 +456,7 @@ img{
     justify-content: space-around;
     margin-bottom: 20px;
     text-align: center;
+    height: 8vh;
   }
 }
 
@@ -383,31 +465,12 @@ img{
     display: block;
   }
  }
-/*media queries*/
 
-/*testing filter and searchbar*/
-.hide{
-  display: none;
-}
-
-#contenedor{
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 800px) {
+ @media screen and (max-width: 800px) {
   #contenedor{
     display: none;
   }
 }
-
-option:hover{
-  background-color: black;
-  color: white;
-  transition: 2s linear;
-}
-
 
 @media screen and (min-width: 800px) {
   #dropdown-mobile{
@@ -415,52 +478,12 @@ option:hover{
   }
 }
 
-.wraper{
-  display: flex;
-  justify-content: center;
+@media screen and (max-width:1000px) {
+  #contenedor-busqueda{
+    display: flex;
+    flex-direction: column;
+  }
 }
+/*media queries*/
 
-.button-value{
-  background-color: transparent;
-  padding: 1em 2.2em;
-  border: 3px solid lightgray;
-  cursor: pointer;
-  border-radius: 3em;
-}
-
-.button-value:hover{
-  background-color: black;
-  color: white;
-  transition: 1000ms linear;
-}
-
-.activo{
-  background-color: black;
-  color: white;
-  overflow-x: hidden;
-}
-
-#contenedor-busqueda input{
-  background-color: transparent;
-  border-bottom: 2px solid #110f29;
-  padding: 1em 0.3em;
-}
-
-#contenedor-busqueda input:focus{
-  border-bottom-color: #6759ff;
-}
-
-#contenedor-busqueda button{
-  padding: 1em 2em;
-  margin-left: 1em;
-  background-color: black;
-  color: #ffffff;
-  border-radius: 5px;
-  margin-top: 0.5em;
-  cursor: pointer;
-}
-
-#contenedor-busqueda button:hover{
-  background-color: #6759ff;
-  transition: 2s;
-}
+/*testing filter and searchbar*/
